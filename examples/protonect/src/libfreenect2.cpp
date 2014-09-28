@@ -339,9 +339,9 @@ Freenect2DeviceImpl::Freenect2DeviceImpl(Freenect2Impl *context, libusb_device *
   rgb_transfer_pool_.setCallback(&rgb_packet_parser_);
   ir_transfer_pool_.setCallback(&depth_packet_parser_);
 
-  depth_packet_processor_.load11To16LutFromFile("");
-  depth_packet_processor_.loadXTableFromFile("");
-  depth_packet_processor_.loadZTableFromFile("");
+  depth_packet_processor_.load11To16LutFromFile("11to16.bin");
+  depth_packet_processor_.loadXTableFromFile("xTable.bin");
+  depth_packet_processor_.loadZTableFromFile("zTable.bin");
 }
 
 Freenect2DeviceImpl::~Freenect2DeviceImpl()
