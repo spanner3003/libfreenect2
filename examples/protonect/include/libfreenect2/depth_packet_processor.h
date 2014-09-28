@@ -164,6 +164,7 @@ private:
   CpuDepthPacketProcessorImpl *impl_;
 };
 
+#ifdef WITH_OPENCL_SUPPORT
 class OpenCLDepthPacketProcessorImpl;
 
 class OpenCLDepthPacketProcessor : public DepthPacketProcessor
@@ -189,6 +190,6 @@ public:
 private:
   OpenCLDepthPacketProcessorImpl *impl_;
 };
-
+#endif // WITH_OPENCL_SUPPORT
 } /* namespace libfreenect2 */
 #endif /* DEPTH_PACKET_PROCESSOR_H_ */
